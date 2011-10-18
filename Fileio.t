@@ -23,7 +23,6 @@ my $d = readfile 'test.txt';
 is $d, "HOGE\nHOGE\nHOGE\n";
 
 my @l = readlines 'test.txt';
-print join("\n", @l), "\n";
 is_deeply \@l, [qw(HOGE HOGE HOGE)];
 
 writefile 'test.txt' => "Hello, world!\n";
