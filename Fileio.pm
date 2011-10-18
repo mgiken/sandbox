@@ -1,4 +1,4 @@
-package File::Extend;
+package Fileio;
 
 use strict;
 use warnings;
@@ -15,6 +15,7 @@ sub fileio(&$;$) {
         select($o);
         close($H);
     } else {
+        die "cannot read $n" unless -r $n;
         local @ARGV = ($n);
         $f->();
     }
