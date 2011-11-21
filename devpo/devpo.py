@@ -26,7 +26,7 @@ def run_smtpd():
 
 def htmlize(s):
   return re.sub(r'\n', r'<br>',
-         re.sub(r'(https?://[\w./?&#%+]+)', r'<a href="\1">\1</a>', s))
+         re.sub(r'(https?://[\w./?&#%+:]+)', r'<a href="\1">\1</a>', s))
 
 app = Flask(__name__)
 
