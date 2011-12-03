@@ -1,0 +1,4 @@
+perl Makefile.PL
+cpanm --install-deps .
+echo 'user@example.com' > user.txt
+echo 'passwd' >> user.txt
